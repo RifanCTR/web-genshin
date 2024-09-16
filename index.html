@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Genshin Impact</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="background-overlay"></div>
+    <div class="menu-bar1">
+        <button class="menu-button" onclick="window.location.href='login.html'">Log In</button>
+        <button class="menu-button sign-in" onclick="window.location.href='sign.html'">Sign In</button>
+    </div>
+    <div class="header">
+        <div class="menu-bar">
+            <div class="menu-items">
+                <a href="#home" class="menu-item">Home</a>
+                <a href="#about" class="menu-item">About</a>
+                <a href="#services" class="menu-item">Services</a>
+                <a href="#contact" class="menu-item">Contact</a>
+            </div>
+            <div class="search-container">
+                <input type="text" placeholder="Search Here" class="search-input">
+                <button class="search-button">
+                    <img src="search-icon.png" alt="Search" class="search-icon">
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="art">
+        <img src="art1.jpg" alt="Search" class="art1">
+        <img src="art2.jpg" alt="Search" class="art2">
+    </div>
+
+    <div class="slider-container">
+        <div class="slider">
+            <!-- Slide 1 -->
+            <div class="slide">
+                <img src="background.png" alt="Background 1" class="bg">
+                <img src="genshin-logo.png" alt="Genshin Impact Logo" class="genshin-logo">
+                <img src="character-image.png" alt="Karakter 1" class="character">
+                <div class="character-info">
+                    <h2 class="character-name">Raiden Shogun</h2>
+                    <p class="character-description">Raiden Shogun is a character from Genshin Impact, a 2020 action role-playing gacha game developed by miHoYo. Added in the game's 2021 update, he was originally a boss enemy that players had to fight, later released as a playable character.</p>
+                </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="slide">
+                <img src="background1.png" alt="Background 1" class="bg1">
+                <img src="genshin-logo.png" alt="Genshin Impact Logo" class="genshin-logo1">
+                <img src="character-image1.png" alt="Karakter 2" class="character1">
+                <div class="character-info">
+                    <h2 class="character-name1">Shenhe</h2>
+                    <p class="character-description1">Shenhe is a playable Cryo character in Genshin Impact. The daughter of an unnamed exorcist couple, Shenhe was taken in and raised by Cloud Retainer as a student after a traumatic event triggered by Shenhe's father during her childhood.</p>
+                </div>
+            </div>
+              <!-- Slide 3 -->
+              <div class="slide">
+                <img src="background2.png" alt="Background 2" class="bg2">
+                <img src="genshin-logo.png" alt="Genshin Impact Logo" class="genshin-logo1">
+                <img src="character-image2.png" alt="Karakter 3" class="character2">
+                <div class="character-info">
+                    <h2 class="character-name2">Diluc</h2>
+                    <p class="character-description1">Diluc Ragnvindr is a playable Pyro character in Genshin Impact. Born into the wealthy Ragnvindr Clan, Diluc is the current owner of Dawn Winery and a highly respected noble in Mondstadt.</p>
+                </div>
+            </div>
+            <!-- Tambahkan slide tambahan jika diperlukan -->
+        </div>
+
+        <!-- Tombol Panah Kiri -->
+        <span class="arrow left-arrow" onclick="prevSlide()">
+            <img src="left-arrow.png" alt="Panah Kiri">
+        </span>
+
+        <!-- Tombol Panah Kanan -->
+        <span class="arrow right-arrow" onclick="nextSlide()">
+            <img src="right-arrow.png" alt="Panah Kanan">
+        </span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

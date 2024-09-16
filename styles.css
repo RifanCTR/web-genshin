@@ -1,0 +1,424 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: url('wallpaper.jpeg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Background Overlay */
+.background-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3); /* White overlay with opacity */
+    filter: blur(10px); /* Blur effect */
+    z-index: -1; /* Ensure it's behind other elements */
+}
+.background-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3); /* White overlay with opacity */
+    filter: blur(5px); /* Blur effect */
+    z-index: -1; /* Ensure it's behind other elements */
+}
+.search-button {
+    padding: 8px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.5);
+    transition: background-color 0.3s ease;
+}
+.search-input {
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+}
+.search-button:hover {
+    background-color: #0056b3;
+}
+
+/* Menu Bar */
+.menu-bar {
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0); /* Bayangan halus */
+    background-color: #00000000; /* Blue color for Sign In button */
+    border-radius: 5px;
+    color: #ffffff; /* White text */
+    position: absolute;
+    top: 40px;
+    right: 550px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    z-index: 3;
+}
+.menu-bar1 {
+    position: absolute;
+    top: 45px;
+    right: 100px;
+    left: 1040px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    z-index: 3;
+    
+}
+/* Menu Button Styling */
+.menu-button {
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    border-radius:5px; /* Rounded corners */
+    padding: 10px 30px;
+    font-size: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 15px rgba(0, 0, 0, 0.15); /* 3D shadow effect */
+}
+
+/* Specific styling for Sign In button */
+.menu-button.sign-in {
+    background-color: #007bff; /* Blue color for Sign In button */
+    color: #ffffff; /* White text */
+}
+
+.menu-items {
+    display: flex;
+    justify-content: center; /* Menempatkan menu di tengah */
+    align-items: center; /* Menyelaraskan item secara vertikal */
+    display: flex;
+    gap: 15px;
+}
+.menu-item {
+    text-decoration: none;
+    color: #000000;
+    font-size: 16px;
+    font-weight: bold; /* Menebalkan font */
+    padding: 10px;
+    border-radius: 50px;
+    background-color: #ff000000;
+    transition: all 0.3s ease;
+}
+/* Hover effects */
+.menu-button:hover {
+    background-color: #000000;
+    color: #ffffff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3), 0 12px 24px rgba(0, 0, 0, 0.25); /* Darker 3D shadow effect on hover */
+}
+
+/* Specific hover effects for Sign In button */
+.menu-button.sign-in:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Top Menu */
+.top-menu {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10; /* Ensure the top menu is on top */
+}
+
+.menu-list {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+}
+
+.menu-list li {
+    display: inline;
+}
+
+.menu-list a {
+    font-weight: bold; /* Menebalkan font */
+    text-decoration: none;
+    color: #000000; /* White text color */
+    padding: 10px 20px;
+    font-size: 15px;
+    border-radius: 20px; /* Rounded corners */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.menu-list a:hover {
+    background-color: #333333; /* Dark background on hover */
+    color: #ffffff; /* White text on hover */
+}
+
+
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #c0c0c0;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Slider Container */
+.slider-container {
+    position: relative;
+    width: 80vw;
+    height: 80vh;
+    overflow: hidden;
+}
+
+/* Slider */
+.slider {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s ease;
+}
+
+/* Slide */
+.slide {
+    min-width: 100%;
+    height: 100%;
+    position: relative;
+    background-size: cover;
+}
+
+/* Background Images */
+.bg {
+    position: absolute;
+    top: -100px;
+    left: -60px;
+    width: 110%;
+    height: 110%;
+    object-fit: cover;
+    z-index: 1;
+}
+.bg1 {
+    position: absolute;
+    top: -100px;
+    left: -70px;
+    width: 110%;
+    height: 110%;
+    object-fit: cover;
+    z-index: 1;
+}
+.bg2 {
+    position: absolute;
+    top: -100px;
+    left: -70px;
+    width: 110%;
+    height: 110%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+/* Genshin Impact Logo */
+.genshin-logo {
+    position: absolute;
+    left: 990px;
+    top: 20px;
+    right: 50px;
+    width: 150px;
+    z-index: 2;
+}
+
+.genshin-logo1 {
+    position: absolute;
+    left: 90px;
+    top: 20px;
+    right: 50px;
+    width: 150px;
+    z-index: 2;
+}
+
+
+/* Character Images */
+.character {
+    top: -173px;
+    position: absolute;
+    bottom: 0;
+    left: -60px;
+    height: 135%;
+    z-index: 2;
+}
+.character1 {
+    top: -173px;
+    position: absolute;
+    bottom: 0;
+    left: -60px;
+    height: 135%;
+    z-index: 2;
+}
+.character2 {
+    top: -110px;
+    position: absolute;
+    bottom: 20;
+    left: 60px;
+    height: 120%;
+    z-index: 2;
+}
+/* Character Info */
+.character-info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    max-width: 50%;
+    z-index: 2;
+}
+
+.character-name {
+    white-space: nowrap;
+    position: absolute;
+    top: -30%;
+    left: 100%;
+    transform: translate(-35%, -65%);
+    color: #fff;
+    font-size: 25px;
+}
+
+.character-name1 {
+    white-space: nowrap;
+    position: absolute;
+    top: -30%;
+    left: 100%;
+    transform: translate(-860%, -65%);
+    color: #fff;
+    font-size: 25px;
+}
+.character-name2 {
+    white-space: nowrap;
+    position: absolute;
+    top: -30%;
+    left: 100%;
+    transform: translate(-1265%, -65%);
+    color: #fff;
+    font-size: 25px;
+}
+.character-description {
+    transform: translate(20%, -20%);
+    text-align: right;
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+.character-description1 {
+    transform: translate(-25%, -20%);
+    text-align: left;
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+.character-description2 {
+    transform: translate(-25%, -20%);
+    text-align: left;
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+/* Navigation Arrows */
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+ 
+    
+}
+
+.left-arrow {
+    left: -10px;
+    top: 200px;
+}
+
+.right-arrow {
+    right: -10px;
+    top: 200px;
+}
+.arrow img {
+    width: 80px; /* Adjust the size of the arrow */
+    height: auto;
+    filter: drop-shadow(0 0 10px rgba(0, 250, 246, 0.5));
+    transition: filter 0.90s ease-in-out;
+}
+/* Search Container */
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+/* Search Input */
+.search-input {
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+
+/* Search Button */
+.search-button {
+    padding: 8px;
+    border: none;
+    background-color: #007bff;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 5px 5px rgba(0, 123, 255, 0.5);
+    transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+    background-color: #0056b3;
+}
+
+/* Search Icon */
+.search-icon {
+    width: 15px; /* Sesuaikan dengan ukuran yang diinginkan */
+    height: 15px; /* Sesuaikan dengan ukuran yang diinginkan */
+}
+.art1 {
+    position: absolute;
+    top: 100%;
+    left: 23%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+    height: 300px;
+    border-radius: 20px;
+}
+.art2 {
+    position: absolute;
+    top: 100%;
+    left: 42%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+    height: 300px;
+    border-radius: 20px;
+}
+body {
+    min-height: 100vh; /* Memastikan tinggi minimum halaman sesuai dengan tinggi layar */
+}
+
+.slider-container {
+    overflow: hidden; /* Memastikan slider tidak menyebabkan overflow yang tak diinginkan */
+}
